@@ -36,7 +36,7 @@ export class SubmitFeedbackUseCase {
         `<p>Feedback do usuário</p>`,
         `<p>Tipo: ${type}</p>`,
         `<p>Comentário: ${comment}</p>`,
-        `<p>Screenshot: ${screenshot}</p>`,
+        screenshot ? `Screenshot: <img src="${screenshot}"/>` : null,
         `</div>`,
       ].join("\n"),
     });
